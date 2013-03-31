@@ -13,7 +13,7 @@
       Signed in as <%= current_student.email %>. Not You ?
       <%= link_to 'Sign out', destroy_student_session_path %>
   <% else %>
-      <%= link_to 'Sign in', new_student_registration_path %> or <%= link_to 'Sign in', new_student_session_path %>
+      <%= link_to 'Sign up', new_student_registration_path %> or <%= link_to 'Sign in', new_student_session_path %>
   <% end %>
 </div>
 
