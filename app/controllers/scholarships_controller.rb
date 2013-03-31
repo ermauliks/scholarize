@@ -1,6 +1,10 @@
 class ScholarshipsController < ApplicationController
   # GET /scholarships
   # GET /scholarships.json
+
+  # Authenticate Students
+  before_filter :authenticate_student!
+
   def index
     @scholarships = Scholarship.all
 

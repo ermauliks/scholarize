@@ -3,12 +3,22 @@
 <head>
   <title>Scholarize</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag :defaults %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
-#devise
-<!--Ensure you have flash messages in app/views/layouts/application.html.erb.-->
+<div id="student_nav">
+  <% if student_signed_in? %>
+      Signed in as <%= current_student.email %>. Not You ?
+      <%= link_to 'Sign out', destroy_student_session_path %>
+  <% else %>
+      <%= link_to 'Sign in', new_student_registration_path %> or <%= link_to 'Sign in', new_student_session_path %>
+  <% end %>
+</div>
+
+
+<!--Devise : Ensure you have flash messages in app/views/layouts/application.html.erb.-->
 <!--For example:-->
 
 <p class="notice"><%= notice %></p>

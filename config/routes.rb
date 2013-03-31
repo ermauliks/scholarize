@@ -1,5 +1,7 @@
 Scholarize::Application.routes.draw do
 
+  devise_for :students
+
   resources :scholarships
   root :to => 'scholarize#index'
 

@@ -58,5 +58,6 @@ module Scholarize
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    config.secret_token = '89dc82f700e975f940776c5798c377a59e30364751044ed88d3f6e3d2e6a801fca892aa9f3552bcf50297423eb3dd11e5ff5f22a9532a4a773a9e1473b2ea90d'
   end
 end
