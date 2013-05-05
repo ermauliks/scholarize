@@ -40,3 +40,4 @@ gem 'jquery-rails'
 
 #devise
 gem 'devise'
+gem 'bootstrap-sass'
